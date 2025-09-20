@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login / Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #111;
+      padding: 30px;
+      border-radius: 12px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      background: #222;
+      color: #fff;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 18px;
+      border-radius: 20px;
+      border: none;
+      background: #1db954; /* green */
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background: #90ee90;
+      transform: scale(1.05);
+    }
+
+    /* Messages */
+    .message {
+      display: none;
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    #registered:target .reg-success {
+      display: block;
+      background: #133;
+      color: #90ee90;
+    }
+
+    #login:target .login-success {
+      display: block;
+      background: #131;
+      color: #90ee90;
+    }
+
+    #login:target .login-fail {
+      display: block;
+      background: #311;
+      color: #ff8080;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="main">
+    <h2>Welcome</h2>
+    <form>
+      <input type="text" placeholder="Enter your name" required>
+    </form>
+    <div>
+      <a href="#registered" class="btn">Register</a>
+      <a href="#login" class="btn">Login</a>
+    </div>
+
+    <!-- Messages -->
+    <div class="message reg-success">✅ You have registered successfully! Please login.</div>
+    <div class="message login-success">✅ Login successful! Welcome back.</div>
+    <div class="message login-fail">⚠️ You are not registered. Please register first.</div>
+  </div>
+
+  <!-- Registered state -->
+  <div id="registered">
+    <div class="container">
+      <h2>Registration</h2>
+      <p class="reg-success">✅ You are now registered. Go ahead and <a href="#login" class="btn">Login</a>.</p>
+    </div>
+  </div>
+
+  <!-- Login attempt -->
+  <div id="login">
+    <div class="container">
+      <h2>Login</h2>
+      <p class="login-fail">⚠️ You must register before logging in.</p>
+      <p><a href="#registered" class="btn">Register Now</a></p>
+    </div>
+  </div>
+</body>
+</html>

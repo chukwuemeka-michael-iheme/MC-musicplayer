@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MC Music Player</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <button class="sidebar-btn"><i class="fas fa-bars"></i></button>
+      <button class="sidebar-btn"><i class="fas fa-plus"></i></button>
+    </div>
+    <div class="sidebar-profiles">
+      <img src="https://via.placeholder.com/60" alt="Profile 1">
+      <img src="https://via.placeholder.com/60" alt="Profile 2">
+      <img src="https://via.placeholder.com/60" alt="Profile 3">
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+    <header class="topbar">
+      <div class="left-section">
+        <div class="tooltip-container">
+          <button class="home-btn"><i class="fas fa-home"></i></button>
+          <span class="tooltip">Home</span>
+        </div>
+        <div class="search-container">
+          <div class="tooltip-container">
+            <button><i class="fas fa-search left-icon"></i></button>
+            <span class="tooltip">Search</span>
+          </div>
+          <input class="search-bar" type="text" placeholder="What do you want to play?">
+          <div class="tooltip-container">
+            <button><i class="fas fa-box-archive right-icon"></i></button>
+            <span class="tooltip">Browse</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <button class="explore-btn">Explore Premium</button>
+        <div class="icons">
+          <div class="tooltip-container">
+            <i class="fas fa-bell"></i>
+            <span class="tooltip">What's new</span>
+          </div>
+          <div class="tooltip-container">
+            <i class="fas fa-users"></i>
+            <span class="tooltip">Friends activity</span>
+          </div>
+        </div>
+        <details class="login-dropdown">
+          <summary class="login-btn"><i class="fas fa-user"></i></summary>
+          <div class="dropdown-menu">
+            <a href="login.html">Login</a>
+            <a href="#">Register</a>
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <!-- Tabs Navigation -->
+    <div class="round-box">
+      <nav class="nav-pills">
+        <a href="#" class="active">All</a>
+        <a href="#">Music</a>
+        <a href="#">Podcasts</a>
+        <a href="#">Audiobooks</a>
+      </nav>
+      <section class="content-section">
+        <h2>Your favourite artists</h2>
+        <div class="artists">
+          <div class="artist">
+            <img src="https://via.placeholder.com/140" alt="Artist 1">
+            <p>Dez Altino</p>
+          </div>
+          <div class="artist">
+            <img src="https://via.placeholder.com/140" alt="Artist 2">
+            <p>Dicko Fils</p>
+          </div>
+          <div class="artist">
+            <img src="https://via.placeholder.com/140" alt="Artist 3">
+            <p>Denco Petit Denis</p>
+          </div>
+          <div class="artist">
+            <img src="https://via.placeholder.com/140" alt="Artist 4">
+            <p>Michael C</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Bottom Player -->
+  <footer class="player">
+    <div class="player">
+      <div class="song-info">
+        <img src="album.jpg" alt="Album Art">
+        <div class="song-details">
+          <span class="song-title">Song Title</span>
+          <span class="artist-name">Artist Name</span>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="control-buttons">
+          <button>🔀</button>
+          <button>⏮️</button>
+          <button class="play">⏯️</button>
+          <button>⏭️</button>
+          <button>📃</button>
+        </div>
+        <div class="progress">
+          <span>0:00</span>
+          <input type="range" min="0" max="100" value="0">
+          <span>3:45</span>
+        </div>
+      </div>
+      <div class="extras">
+        <button>📺</button>
+        <button>🔈</button>
+        <input type="range" min="0" max="100" value="60">
+        <button>⛶</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Spotify Integration Script -->
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script src="Javascript/jav.js"></script>
+</body>
+</html>
