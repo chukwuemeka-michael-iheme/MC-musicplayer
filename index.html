@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>MC Music Player</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MC Music Player</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="CSS/style.css">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Sidebar -->
+
+  <!-- ================= Sidebar ================= -->
   <aside class="sidebar">
+    <!-- Top Buttons -->
     <div class="sidebar-top">
       <button class="sidebar-btn"><i class="fas fa-bars"></i></button>
       <button class="sidebar-btn"><i class="fas fa-plus"></i></button>
     </div>
+
+    <!-- Profile Shortcuts -->
     <div class="sidebar-profiles">
       <img src="https://via.placeholder.com/60" alt="Profile 1">
       <img src="https://via.placeholder.com/60" alt="Profile 2">
@@ -25,20 +30,34 @@
     </div>
   </aside>
 
-  <!-- Main Content -->
+  <!-- Mobile profile icon -->
+  <div class="mobile-profile">
+    <img src="https://via.placeholder.com/40" alt="Profile">
+  </div>
+
+  <!-- ================= Main Content ================= -->
   <main class="main">
+
+    <!-- ===== Top Bar ===== -->
     <header class="topbar">
+      <!-- Left Section -->
       <div class="left-section">
+
+        <!-- Home Button -->
         <div class="tooltip-container">
           <button class="home-btn"><i class="fas fa-home"></i></button>
           <span class="tooltip">Home</span>
         </div>
+
+        <!-- Search Bar -->
         <div class="search-container">
           <div class="tooltip-container">
             <button><i class="fas fa-search left-icon"></i></button>
             <span class="tooltip">Search</span>
           </div>
+
           <input class="search-bar" type="text" placeholder="What do you want to play?">
+
           <div class="tooltip-container">
             <button><i class="fas fa-box-archive right-icon"></i></button>
             <span class="tooltip">Browse</span>
@@ -46,8 +65,11 @@
         </div>
       </div>
 
+      <!-- Right Section -->
       <div class="right-section">
         <button class="explore-btn">Explore Premium</button>
+
+        <!-- Notification & Friends -->
         <div class="icons">
           <div class="tooltip-container">
             <i class="fas fa-bell"></i>
@@ -58,24 +80,25 @@
             <span class="tooltip">Friends activity</span>
           </div>
         </div>
-        <details class="login-dropdown">
-          <summary class="login-btn"><i class="fas fa-user"></i></summary>
-          <div class="dropdown-menu">
-            <a href="login.html">Login</a>
-            <a href="#">Register</a>
-          </div>
-        </details>
+
+        <!-- Profile -->
+        <div class="profile">
+          <img src="https://via.placeholder.com/32" alt="User Profile">
+        </div>
       </div>
     </header>
 
-    <!-- Tabs Navigation -->
+    <!-- ===== Round Box with Tabs ===== -->
     <div class="round-box">
+      <!-- Navigation inside the box -->
       <nav class="nav-pills">
         <a href="#" class="active">All</a>
         <a href="#">Music</a>
         <a href="#">Podcasts</a>
         <a href="#">Audiobooks</a>
       </nav>
+
+      <!-- Artists Section -->
       <section class="content-section">
         <h2>Your favourite artists</h2>
         <div class="artists">
@@ -100,41 +123,63 @@
     </div>
   </main>
 
-  <!-- Bottom Player -->
+  <!-- ================= Bottom Player ================= -->
   <footer class="player">
-    <div class="player">
-      <div class="song-info">
-        <img src="album.jpg" alt="Album Art">
-        <div class="song-details">
-          <span class="song-title">Song Title</span>
-          <span class="artist-name">Artist Name</span>
-        </div>
+    <!-- LEFT: Song Info -->
+    <div class="song-info">
+      <img src="album.jpg" alt="Album Art">
+      <div class="song-details">
+        <span class="song-title">Song Title</span>
+        <span class="artist-name">Artist Name</span>
       </div>
-      <div class="controls">
-        <div class="control-buttons">
-          <button>🔀</button>
-          <button>⏮️</button>
-          <button class="play">⏯️</button>
-          <button>⏭️</button>
-          <button>📃</button>
-        </div>
-        <div class="progress">
-          <span>0:00</span>
-          <input type="range" min="0" max="100" value="0">
-          <span>3:45</span>
-        </div>
+    </div>
+
+    <!-- CENTER: Controls + Progress -->
+    <div class="controls">
+      <div class="control-buttons">
+        <button>🔀</button>
+        <button>⏮️</button>
+        <button class="play">⏯️</button>
+        <button>⏭️</button>
+        <button>📃</button>
       </div>
-      <div class="extras">
-        <button>📺</button>
-        <button>🔈</button>
-        <input type="range" min="0" max="100" value="60">
-        <button>⛶</button>
+      <div class="progress">
+        <span>0:00</span>
+        <input type="range" min="0" max="100" value="30">
+        <span>3:45</span>
       </div>
+    </div>
+
+    <!-- RIGHT: Extra Controls -->
+    <div class="extras">
+      <button>📺</button>
+      <button>🔈</button>
+      <input type="range" min="0" max="100" value="60">
+      <button>⛶</button>
     </div>
   </footer>
 
-  <!-- Spotify Integration Script -->
-  <script src="https://sdk.scdn.co/spotify-player.js"></script>
-  <script src="Javascript/jav.js"></script>
+  <!-- ===== Mobile Mini Player ===== -->
+  <div class="mobile-player">
+    <img src="album.jpg" alt="album art" class="mini-art">
+    <div class="mini-info">
+      <div class="mini-title">Song Title</div>
+      <div class="mini-artist">Artist Name</div>
+    </div>
+    <button class="mini-play"><i class="fa fa-play"></i></button>
+  </div>
+
+  <!-- ===== Mobile Bottom Navigation ===== -->
+  <nav class="mobile-nav">
+    <a href="#" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="#" class="nav-item"><i class="fas fa-search"></i><span>Search</span></a>
+    <a href="#" class="nav-item"><i class="fas fa-book"></i><span>Your Library</span></a>
+    <a href="#" class="nav-item"><i class="fas fa-crown"></i><span>Premium</span></a>
+    <a href="#" class="nav-item"><i class="fas fa-plus-circle"></i><span>Create</span></a>
+  </nav>
+
+  <!-- ===== JavaScript ===== -->
+  <!-- Make sure the file name/path matches exactly -->
+  <script src="Javascript/mc-music-player.js"></script>
 </body>
 </html>
