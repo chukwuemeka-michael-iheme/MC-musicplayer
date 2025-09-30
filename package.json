@@ -1,0 +1,10 @@
+{
+  "name": "music-app-prototype",
+  "version": "1.0.0",
+  "description": "Frontend-only Music App prototype",
+  "scripts": {
+    "start": "http-server ."
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
